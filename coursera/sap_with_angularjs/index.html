@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>SAP with AngularJs</title>
-  </head>
-  <body>
-    <h1>Learning AngularJS</h1>
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <title>My first AngularJS App</title>
+</head>
+<body>
+<div ng-app="myFirstApp">
+    <h2>My first Angular App</h2>
+    <div ng-controller="MyFirstController">
+        {{name}}
+        <input ng-model="name">
+        {{sayHello(name)}}
+    </div>
 
-  </body>
+    <h2>Name Calculator</h2>
+    <div ng-controller="nameCalculatorController">
+        <div>
+            Your name:
+            <input type="text" ng-model="string" ng-keyup="displayNumeric();">
+        </div>
+        <div> Total Numeric value of person's name is: {{totalValue}} </div>
+    </div>
+</div>
+</body>
 </html>
