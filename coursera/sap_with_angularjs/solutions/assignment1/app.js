@@ -23,7 +23,7 @@
     }
     var getNumOfItem= function (list){
       list =list.split(',').filter(function(list){
-        return list.length>0;
+        return list.trim().length>0 ;
       });
       return list.length;
     };
